@@ -22,7 +22,6 @@ export default {
     // computed: {},
     methods: {
 
-
         redirecTo(i){
             this.$router.push(`/peleador_encontrado/${i}`)
         }

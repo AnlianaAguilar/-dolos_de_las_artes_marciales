@@ -1,17 +1,21 @@
 <template>
     <div>
         <h1>¡Peleador Encontrad!</h1>
-        <h4>{{id}}</h4>  
+        <component-card :id="id" :name="nameFighter" :src="scrImg"></component-card>
     </div>
 
 </template>
 
 <script>
+
+import Card from '@/components/Card.vue'
 export default {
     name: 'foundFighter-view',
     // props: {},
     data: function(){
-        return {}
+        return {
+            srcImg:'',
+        }
     },
     computed: {
         id(){
@@ -20,10 +24,15 @@ export default {
     },
     //methods: {}
     // watch: {},
-    // components: {},
+    components: {
+        'component-card':Card,
+    },
     // mixins: [],
     // filters: {},
     // -- Lifecycle Methods
+    created(){
+        this.srcImg = require(`/peleadores.json/${this.id}.imgSrc`)
+    }
     // -- End Lifecycle Methods
 }
 </script>
