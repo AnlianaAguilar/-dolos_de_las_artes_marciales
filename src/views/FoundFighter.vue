@@ -1,5 +1,9 @@
 <template>
-    <h1>¡Peleador Encontrad!</h1>
+    <div>
+        <h1>¡Peleador Encontrad!</h1>
+        <h4>{{id}}</h4>  
+    </div>
+
 </template>
 
 <script>
@@ -9,7 +13,11 @@ export default {
     data: function(){
         return {}
     },
-    // computed: {},
+    computed: {
+        id(){
+            return this.$route.params.id
+        }
+    },
     //methods: {}
     // watch: {},
     // components: {},
