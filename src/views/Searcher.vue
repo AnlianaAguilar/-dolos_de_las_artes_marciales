@@ -2,11 +2,12 @@
     <div>
         <h1>Buscar un peleador por id</h1>
         <input type="text" v-model="idFighter">
-        <button>Buscar</button>
+        <button @click="searcherFighter">Buscar</button>
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'searcher-view',
     // props: {},
@@ -16,7 +17,11 @@ export default {
         }
     },
     // computed: {},
-    //methods: {}
+    methods: {
+        searcherFighter(){
+            this.$router.push(`/peleador_encontrado/${this.idFighter}`)
+        }
+    },  
     // watch: {},
     // components: {},
     // mixins: [],
@@ -29,3 +34,4 @@ export default {
 <style scoped>
     
 </style>
+

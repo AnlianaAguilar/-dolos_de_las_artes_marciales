@@ -1,25 +1,15 @@
 <template>
     <div>
-        <h1>id:{{id}}</h1>
-        <h1>Nombre:{{name}}</h1>
-        <img :src="src" alt="img">
+        <h1>Esta pagina no existe!!</h1>
+        <router-link to='/'>Ir a inicio</router-link>
     </div>
+    
 </template>
 
 <script>
 export default {
-    name: 'component-name',
-    props: {
-        id:{
-            type:String
-        },
-        name:{
-            type:String
-        },
-        src:{
-            type:String
-        }
-    },
+    name: 'NotFound-view',
+    // props: {},
     data: function(){
         return {}
     },

@@ -1,20 +1,24 @@
 <template>
     <div>
-        <h1>¡Peleador Encontrad!</h1>
-        <component-card :id="id" :name="nameFighter" :src="scrImg"></component-card>
+        <h1 v-if="foundFighter">¡Peleador Encontrado!</h1>
+        <component-card v-if="foundFighter" :id="id" :name="name" :src="srcImg"></component-card>
+        <div v-else>Peleadro no Encontrado</div>
     </div>
 
 </template>
 
 <script>
-
+import data from '/peleadores.json'
 import Card from '@/components/Card.vue'
 export default {
     name: 'foundFighter-view',
     // props: {},
     data: function(){
         return {
+            name:'',
             srcImg:'',
+            data:data,
+            foundFighter:false
         }
     },
     computed: {
@@ -22,7 +26,19 @@ export default {
             return this.$route.params.id
         }
     },
-    //methods: {}
+    methods: {
+        found(){
+            let foundFighter= this.data.find((fighter)=>{
+                return fighter.id==this.id
+            })
+            if(foundFighter){
+                this.name=foundFighter.nombre
+                this.srcImg= foundFighter.imgSrc
+                this.foundFighter=true   
+            }
+  
+        }
+    },
     // watch: {},
     components: {
         'component-card':Card,
@@ -31,7 +47,7 @@ export default {
     // filters: {},
     // -- Lifecycle Methods
     created(){
-        this.srcImg = require(`/peleadores.json/${this.id}.imgSrc`)
+        this.found()
     }
     // -- End Lifecycle Methods
 }

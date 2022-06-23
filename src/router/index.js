@@ -4,15 +4,11 @@ import VueRouter from 'vue-router'
 import Searcher from '@/views/Searcher.vue'
 import Fighters from '@/views/Fighters.vue'
 import FoundFighter from '@/views/FoundFighter.vue'
+import NotFound from '@/views/NotFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'home',
-  //   component: HomeView
-  // },
   {
     path: '/',
     name: 'peleadores',
@@ -26,15 +22,11 @@ const routes = [
   {
     path:'/peleador_encontrado/:id', //ruta dinamica
     component:FoundFighter,
-  }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  },
+  {
+  path:'*', //ruta que no existen
+  component:NotFound,
+  },
 ]
 
 const router = new VueRouter({
