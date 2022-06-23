@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h1>Buscar un peleador por id</h1>
-        <input type="text" v-model="idFighter">
-        <button @click="searcherFighter">Buscar</button>
+    <div class="container">
+        <h1 class="h1 my-3">Buscar un peleador por id</h1>
+        <input type="text" placeholder="Ingrese el número de peleador" v-model="idFighter">
+        <button class="mx-2 btn btn-secondary" @click="searcherFighter">Buscar</button>
     </div>
 </template>
 
@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style scoped>
-    
+    input{
+        width: 250px;
+        height: 35px;
+    }
 </style>
 

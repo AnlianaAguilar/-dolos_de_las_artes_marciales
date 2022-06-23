@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h1 v-if="foundFighter">¡Peleador Encontrado!</h1>
+    <div class="container">
+        <h1 class="display-5" v-if="foundFighter">¡Peleador Encontrado!</h1>
         <component-card v-if="foundFighter" :id="id" :name="name" :src="srcImg"></component-card>
-        <div v-else>El Peleador que buscas no existe <i class="fa-regular fa-face-sad-tear"></i></div>
+        <div class="display-5" v-else>El Peleador que buscas no existe!!!  <i class="fa-regular fa-face-sad-tear"></i></div>
     </div>
 
 </template>

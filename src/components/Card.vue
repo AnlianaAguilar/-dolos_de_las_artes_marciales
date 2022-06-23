@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h1>id:{{id}}</h1>
-        <h1>Nombre:{{name}}</h1>
-        <img :src="src" alt="img">
+    <div class="container">
+        <p class="h5"><strong>id:</strong> {{id}}</p>
+        <p class="h5"><strong>Nombre:</strong> {{name}}</p>
+        <img class="rounded mx-auto d-block" :src="src" alt="img">
     </div>
 </template>
 

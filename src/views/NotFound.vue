@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Esta pagina no existe!! <i class="fa-regular fa-face-frown"></i></h1>
+    <div class="container">
+        <h1 class="h1" >Esta pagina no existe!! <i class="fa-regular fa-face-frown"></i></h1>
         <router-link to='/'>Ir a inicio</router-link>
     </div>
     
