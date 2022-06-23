@@ -19,7 +19,7 @@ export default {
     // computed: {},
     methods: {
         searcherFighter(){
-            this.$router.push(`/peleador_encontrado/${this.idFighter}`)
+            this.$router.push(`/peleador_encontrado/${this.idFighter}`) //redireccion programativa
         }
     },  
     // watch: {},

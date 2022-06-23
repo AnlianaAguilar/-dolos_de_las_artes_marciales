@@ -2,7 +2,7 @@
     <div>
         <h1 v-if="foundFighter">¡Peleador Encontrado!</h1>
         <component-card v-if="foundFighter" :id="id" :name="name" :src="srcImg"></component-card>
-        <div v-else>Peleadro no Encontrado</div>
+        <div v-else>El Peleador que buscas no existe <i class="fa-regular fa-face-sad-tear"></i></div>
     </div>
 
 </template>
